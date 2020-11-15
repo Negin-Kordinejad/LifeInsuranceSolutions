@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GeneralMaster.master.cs" Inherits="BimeOmr.Web.InsuredAgentOrg.Login.GeneralMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../../Content/Font/css/all.css" rel="stylesheet" />
+    <link href="../../Content/Style/footerstyle.css" rel="stylesheet" />
+    <%--<link href="../../Content/LoginStyle/Custom-Cs.css" rel="stylesheet" />--%>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <%--<link href="../../Content/Script/StyleSheet.css" rel="stylesheet" />--%>
+
+    <style>
+        .overlay {
+            width: 100%;
+            background: rgba(245, 245, 245, 0.9);
+            background-size: cover;
+            z-index: 1;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="m-0 p-0" style="background-image: url(../../Content/Image/bglogo.png);">
+    <form id="form1" runat="server" class="p-0">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <div class="row">
+            <footer style="position: fixed; left: 0; bottom: 0; width: 100%; margin: 0; border-top: dotted" class="bg-light">
+                <div class="container footerlinks">
+                    <asp:LinkButton ID="AdminLog" runat="server">AdminLogin</asp:LinkButton>
+                    <small class="text-muted">Someone famous in <cite title="Source Title">Source Title</cite>
+                    </small>
+                </div>
+                
+            </footer>
+        </div>
+    </form>
+
+</body>
+</html>

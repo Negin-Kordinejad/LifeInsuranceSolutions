@@ -1,0 +1,333 @@
+﻿body {
+    padding-right: 0px;
+    padding-left: 0px;
+    font-size: 9pt;
+    padding-bottom: 0px;
+    margin: 5px 0px;
+    color: #000000;
+    direction: ltr;
+    padding-top: 0px;
+    font-family: tahoma, sans-serif;
+    background-color: #ffffff;
+    text-align: left;
+}
+
+.clsbt {
+    BORDER-RIGHT: #999999 1px solid;
+    PADDING-RIGHT: 1px;
+    BORDER-TOP: #999999 1px solid;
+    PADDING-LEFT: 1px;
+    FONT-SIZE: 8pt;
+    BORDER-LEFT: #999999 1px solid;
+    BORDER-BOTTOM: #999999 1px solid;
+    FONT-FAMILY: Tahoma;
+    COLOR: #ffffff;
+    background: #729E83;
+}
+
+
+.clstxtl {
+    BORDER-RIGHT: #9FB8A2 1px solid;
+    BORDER-TOP: #9FB8A2 1px solid;
+    BORDER-LEFT: #9FB8A2 1px solid;
+    BORDER-BOTTOM: #9FB8A2 1px solid;
+    FONT-SIZE: 9pt;
+    COLOR: #666666;
+    FONT-FAMILY: tahoma;
+   
+}
+
+
+.txtVisibility {
+    display: none;
+}
+
+.txtNewsDate {
+    direction: ltr;
+}
+
+.txtJustify {
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 9pt;
+    line-height: normal;
+}
+
+A.HypNavy {
+    FONT-SIZE: 9pt;
+    COLOR: Navy;
+    FONT-FAMILY: tahoma;
+    TEXT-DECORATION: none;
+}
+
+    A.HypNavy:hover {
+        FONT-SIZE: 9pt;
+        COLOR: #808080;
+        FONT-FAMILY: tahoma;
+        TEXT-DECORATION: underline;
+        cursor: hand;
+    }
+
+A.link7 {
+    FONT-SIZE: 9pt;
+    COLOR: Navy;
+    FONT-FAMILY: tahoma;
+    TEXT-DECORATION: none;
+}
+
+    A.link7:hover {
+        FONT-SIZE: 9pt;
+        COLOR: #808080;
+        FONT-FAMILY: tahoma;
+        TEXT-DECORATION: underline;
+        cursor: hand;
+    }
+
+A.HypOrange {
+    FONT-SIZE: 9pt;
+    COLOR: #cc3300;
+    FONT-FAMILY: tahoma;
+    TEXT-DECORATION: none;
+}
+
+    A.HypOrange:hover {
+        FONT-SIZE: 9pt;
+        COLOR: #808080;
+        FONT-FAMILY: tahoma;
+        TEXT-DECORATION: underline;
+    }
+
+A.link8 {
+    FONT-SIZE: 9pt;
+    COLOR: #cc3300;
+    FONT-FAMILY: tahoma;
+    TEXT-DECORATION: none;
+}
+
+    A.link8:hover {
+        FONT-SIZE: 9pt;
+        COLOR: #808080;
+        FONT-FAMILY: tahoma;
+        TEXT-DECORATION: underline;
+    }
+
+table {
+    font-size: 9pt;
+    font-family: Tahoma, sans-serif;
+}
+
+
+.MyTinyFont {
+    font-family: 'Tahoma';
+    font-size: 9pt;
+}
+
+.MySmallFont {
+    font-family: 'Tahoma';
+    font-size: 10pt;
+}
+
+.MyMiddFont {
+    font-family: 'Tahoma';
+    font-size: 12pt;
+}
+
+.TextJustify {
+    text-align: justify;
+    direction: rtl
+}
+
+
+.clstxt {
+    BORDER-RIGHT: #9FB8A2 1px solid;
+    BORDER-TOP: #9FB8A2 1px solid;
+    BORDER-LEFT: #9FB8A2 1px solid;
+    BORDER-BOTTOM: #9FB8A2 1px solid;
+    FONT-SIZE: 11px;
+    COLOR: #666666;
+    FONT-FAMILY: tahoma;
+    direction: rtl;
+}
+
+.clstxtCounter {
+    FONT-SIZE: 10pt;
+    FONT-FAMILY: tahoma;
+    height:    text-align: center;
+}
+
+.center-page {
+    width: 300px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.space-vert {
+    margin-top: 20px;
+}
+
+.footer-pos {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 600px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+body {
+    /*    padding-top: 50px;*/
+}
+
+/*products.aspx*/
+.probrand {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 15px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+.proName {
+    font-size: 13px;
+    line-height: 17px;
+    font-family: sans-serif;
+}
+
+.proPrice {
+    font-size: 14px;
+    line-height: 17px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.proOgPrice {
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: gray;
+}
+
+.proPriceDiscount {
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: deeppink;
+}
+
+/*productview*/
+.proNameView {
+    font-size: 20px;
+    line-height: 25px;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #696e80;
+}
+
+.proOgPriceView {
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: gray;
+}
+
+.proPriceDiscountView {
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: deeppink;
+}
+
+.proPriceView {
+    font-size: 16px;
+    line-height: 17px;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.divDet1 {
+    border-bottom: 1px dashed #D5D6D8;
+    margin-bottom: 20px;
+}
+
+.h5Size {
+    font-weight: 600;
+}
+
+input[type=radio] {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.mainButton {
+    border-radius: 3px;
+    outline: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    min-height: 22px;
+    padding: 10px 15px;
+    min-width: 108px;
+    font-weight: 500;
+    background-color: #FF5722;
+    border: 1px solid #FF5722;
+    color: #fff;
+}
+
+#btnCart {
+    margin-right: 6px;
+}
+
+/*Cart*/
+.proNameViewCart {
+    font-size: 15px;
+    line-height: 25px;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #696e80;
+}
+
+.removeButton {
+    border-radius: 3px;
+    outline: 0;
+    margin-top: 10px;
+    font-size: 13px;
+    min-height: 22px;
+    min-width: 90px;
+    font-weight: 500;
+    background-color: #FF5722;
+    border: 1px solid #FF5722;
+    color: #fff;
+}
+
+.priceGray {
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: dimgray;
+}
+
+.priceGreen {
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #20bd99;
+}
+
+.buyNowBtn {
+    border-radius: 3px;
+    outline: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    min-height: 22px;
+    padding: 10px 15px;
+    font-weight: 500;
+    background-color: #14cda8;
+    border: 1px solid #14cda8;
+    color: #fff;
+    width: 100%;
+}

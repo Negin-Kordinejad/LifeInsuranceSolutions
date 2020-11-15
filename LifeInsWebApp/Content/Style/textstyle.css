@@ -1,0 +1,52 @@
+﻿.highlight {
+    color: #FF0000;
+}
+
+.highlightBold {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.auto-style1 {
+    height: 16px;
+}
+
+.highlightBoldGreen {
+    color: #009933;
+    font-weight: 700;
+}
+
+.highlightDarkGreen {
+    color: #00591D;
+}
+
+.auto-style2 {
+    width: 898px;
+}
+
+.auto-style3 {
+    color: #0066FF;
+}
+
+.auto-style4 {
+    color: #006600;
+}
+
+.auto-style5 {
+    color: #FF3300;
+    font-size: medium;
+}
+
+.auto-style6 {
+    color: #FF0000;
+    font-size: medium;
+}
+
+.auto-style7 {
+    color: #006600;
+    font-size: medium;
+}
+
+.auto-style8 {
+    font-size: medium;
+}

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+  <ImageUrl>../Image/ContactUs.jpg</ImageUrl>
+  <NavigateUrl>https://www.seniors.com.au/</NavigateUrl>
+  <AlternateText>jhbljhvj</AlternateText>
+  <Impressions>30</Impressions>
+  <keyword>g</keyword></Ad>
+  <Ad>
+    <ImageUrl>../Image/images2.jpg</ImageUrl>
+    <NavigateUrl>https://www.seniors.com.au/</NavigateUrl>
+    <AlternateText>szdhfxdfx</AlternateText>
+    <Impressions>10</Impressions>
+    <keyword>k</keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>../Image/images3.jpg</ImageUrl>
+    <NavigateUrl>https://www.seniors.com.au/</NavigateUrl>
+    <AlternateText>kjbjkbj</AlternateText>
+    <Impressions>10</Impressions>
+    <keyword>k</keyword>
+  </Ad>
+</Advertisements>

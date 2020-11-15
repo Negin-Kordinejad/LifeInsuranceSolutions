@@ -1,0 +1,174 @@
+﻿body {
+    padding-right: 0px;
+    padding-left: 0px;
+    font-size: 10pt;
+    padding-bottom: 0px;
+    margin: 5px 0px;
+    color: #000000;
+    direction: ltr;
+    padding-top: 0px;
+    font-family: tahoma, sans-serif;
+    background-color: #ffffff;
+}
+
+
+
+table.t {
+    font-size: 10pt;
+    font-family: Tahoma, sans-serif;
+}
+
+
+
+
+.MySmallFont {
+    font-family: 'Tahoma';
+    font-size: 10pt;
+}
+
+.MySmallFontRight {
+    font-family: 'Tahoma';
+    font-size: 10pt;
+    text-align: right;
+}
+
+.MyMiddFontRight {
+    font-family: 'B Lotus';
+    font-size: 14pt;
+    text-align: right;
+}
+
+.MyMiddFontCenter {
+    font-family: 'B Lotus';
+    font-size: 14pt;
+    text-align: center;
+}
+
+.MyMiddFont {
+    font-family: 'Tahoma';
+    font-size: 12pt;
+}
+
+.MyMiddBottom_Normal {
+    font-family: 'B Lotus';
+    font-size: 18pt;
+    text-align: right;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    background-color: transparent;
+    border-bottom-style: none;
+    color: white;
+    background-image: url(ReportIcons/btx.gif);
+    background-repeat: no-repeat;
+}
+
+.XBottom_Large {
+    font-family: 'B Lotus';
+    font-size: 18pt;
+    text-align: right;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    background-color: transparent;
+    border-bottom-style: none;
+    color: white;
+    background-repeat: no-repeat;
+}
+
+
+.MyNormalZarFont {
+    font-family: 'B Zar';
+    font-size: 16pt;
+}
+body {
+}
+
+.btnArrive {
+    font-size: 10pt;
+    font-family: Tahoma;
+    vertical-align: bottom;
+    cursor: pointer;
+    background: url('../Images/Loginicon.gif') no-repeat center center;
+}
+
+    .btnArrive:hover {
+        font-size: 10pt;
+        font-family: Tahoma;
+        border-right: #111111 1px solid;
+        border-top: #111111 1px solid;
+        border-left: #111111 1px solid;
+        border-bottom: #111111 1px solid;
+        vertical-align: bottom;
+        cursor: pointer;
+        background: url('../Images/Loginicon.gif') no-repeat center center;
+    }
+
+.TextDes {
+    font-size: 10pt;
+    color: #0a1652; /* #ff0000;*/
+    border-spacing: 0px;
+    empty-cells: hide;
+    vertical-align: middle;
+    text-align: right;
+    line-height: 20px;
+    float: right;
+}
+
+.List ul {
+    list-style: none url(../Images/pdf1.gif);
+    vertical-align: middle;
+}
+
+.List li {
+    vertical-align: middle;
+}
+
+.divList {
+    background-color: #ffffdd;
+    width: 366px;
+    text-align: right;
+    height: 27px;
+    vertical-align: middle;
+    border: solid 1px #d1e0d3;
+    padding-top: 7px;
+}
+
+.divRowSpace {
+    height: 1px;
+    background-color: #ffffff;
+    width: 55%;
+    text-align: center;
+}
+
+.Panel legend {
+    font-family: Tahoma;
+    font-size: 9pt;
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+.divMessageTitle {
+    overflow: hidden;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 11px;
+    border: solid 1px #d1e0d3;
+    background-color: #f8f8f8;
+    line-height: 25px;
+}
+
+.imagBtn {
+    font-family: Tahoma;
+    font-size: 10pt;
+    color: #0a1654;
+    cursor: pointer;
+    direction: rtl;
+    font-weight: bold;
+    background: url('../Images/Green-Bg-Header.gif') no-repeat center center;
+}
+
+
+
+

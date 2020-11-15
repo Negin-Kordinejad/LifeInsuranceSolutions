@@ -1,0 +1,69 @@
+
+27/08/2020 3:16:58 PM ==> 7010028شماره ملی :2593133864-ErrorCode : 1
+There are not enough fields in the Structured type.  Structured types must have at least one field.
+   at System.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, _SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Cspf.Model.Base.CspfDatabaseHelper.SelectInDataSetFromStoredProcedure(String connectionString, Int32 commandTimeout, String storedProcedureName, String tableName, SqlParameter[] parameters)
+   at Cspf.Model.Base.CspfDatabaseHelper.SelectInDataSetFromStoredProcedure(String connectionString, String storedProcedureName, SqlParameter[] parameters)
+   at DataMangerClassLibrary.DataAccess.ClaimData.SubmitClaim(ClaimModel model) in C:\Users\n_kor\source\repos\LifeInsuranceSolutions\DataMangerClassLibrary\DataAccess\ClaimData.cs:line 30
+   at LifeInsWebApp.InsuredAgentOrg.Claim.SaveGharamat() in C:\Users\n_kor\source\repos\LifeInsuranceSolutions\LifeInsWebApp\InsuredAgentOrg\Claim.aspx.cs:line 224
+27/08/2020 3:29:02 PM ==> 7010028NationalCode :2593133864-ErrorCode : 1
+There are not enough fields in the Structured type.  Structured types must have at least one field.
+   at System.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, _SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Cspf.Model.Base.CspfDatabaseHelper.SelectInDataSetFromStoredProcedure(String connectionString, Int32 commandTimeout, String storedProcedureName, String tableName, SqlParameter[] parameters)
+   at Cspf.Model.Base.CspfDatabaseHelper.SelectInDataSetFromStoredProcedure(String connectionString, String storedProcedureName, SqlParameter[] parameters)
+   at DataMangerClassLibrary.DataAccess.ClaimData.SubmitClaim(ClaimModel model) in C:\Users\n_kor\source\repos\LifeInsuranceSolutions\DataMangerClassLibrary\DataAccess\ClaimData.cs:line 30
+   at LifeInsWebApp.InsuredAgentOrg.Claim.SaveGharamat() in C:\Users\n_kor\source\repos\LifeInsuranceSolutions\LifeInsWebApp\InsuredAgentOrg\Claim.aspx.cs:line 224
+27/08/2020 3:33:00 PM ==> 7010028NationalCode :2593133864-ErrorCode : 1
+There are not enough fields in the Structured type.  Structured types must have at least one field.
+   at System.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, _SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Cspf.Model.Base.CspfDatabaseHelper.SelectInDataSetFromStoredProcedure(String connectionString, Int32 commandTimeout, String storedProcedureName, String tableName, SqlParameter[] parameters)
+   at Cspf.Model.Base.CspfDatabaseHelper.SelectInDataSetFromStoredProcedure(String connectionString, String storedProcedureName, SqlParameter[] parameters)
+   at DataMangerClassLibrary.DataAccess.ClaimData.SubmitClaim(ClaimModel model) in C:\Users\n_kor\source\repos\LifeInsuranceSolutions\DataMangerClassLibrary\DataAccess\ClaimData.cs:line 30
+   at LifeInsWebApp.InsuredAgentOrg.Claim.SaveGharamat() in C:\Users\n_kor\source\repos\LifeInsuranceSolutions\LifeInsWebApp\InsuredAgentOrg\Claim.aspx.cs:line 224
+27/08/2020 3:39:30 PM ==> 7010028NationalCode :2593133864-ErrorCode : 1
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreResults(Boolean& moreResults)
+   at System.Data.SqlClient.SqlDataReader.TryNextResult(Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.NextResult()
+   at System.Data.ProviderBase.DataReaderContainer.NextResult()
+   at System.Data.Common.DataAdapter.FillNextResult(DataReaderContainer dataReader)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Cspf.Model.Base.CspfDatabaseHelper.SelectInDataSetFromStoredProcedure(String connectionString, Int32 commandTimeout, String storedProcedureName, String tableName, SqlParameter[] parameters)
+   at Cspf.Model.Base.CspfDatabaseHelper.SelectInDataSetFromStoredProcedure(String connectionString, String storedProcedureName, SqlParameter[] parameters)
+   at DataMangerClassLibrary.DataAccess.ClaimData.SubmitClaim(ClaimModel model) in C:\Users\n_kor\source\repos\LifeInsuranceSolutions\DataMangerClassLibrary\DataAccess\ClaimData.cs:line 30
+   at LifeInsWebApp.InsuredAgentOrg.Claim.SaveGharamat()

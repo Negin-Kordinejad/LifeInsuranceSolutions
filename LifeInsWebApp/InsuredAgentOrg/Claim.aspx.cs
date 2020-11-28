@@ -7,6 +7,8 @@ using LifeInsWebApp.Helper;
 
 namespace LifeInsWebApp.InsuredAgentOrg
 {
+
+    //This for DevOps
     public partial class Claim : System.Web.UI.Page
     {
         private ILogger _logger = DataAccessFactory.Log();

@@ -153,7 +153,7 @@
                             OnClick="SignInBt_Click" TabIndex="4" Width="60px" />
                         &nbsp;<asp:Button ID="btnCancle" runat="server" Text="Ignore" CssClass="clsbt" OnClick="btnCancle_Click"
                             TabIndex="5" Width="60px" />
-                      <a class="btn-link" href="SignUp.aspx">Sign Up</a>
+                      <a class="btn-link" href="PublicSignUp/SignUp.aspx">Sign Up</a>
                 </div>
                 <div class="card-footer text-muted mt-0">
                     <asp:Label ID="Label1" runat="server" Font-Names="Tahoma" Font-Size="9pt">

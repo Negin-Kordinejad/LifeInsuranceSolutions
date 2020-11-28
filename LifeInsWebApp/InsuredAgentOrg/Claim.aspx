@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/InsuredAgentOrg/MasterPage.Master" AutoEventWireup="true" CodeBehind="Claim.aspx.cs" Inherits="LifeInsWebApp.InsuredAgentOrg.Claim" %>
+﻿<%@ Page Title=""  Language="C#" MasterPageFile="~/InsuredAgentOrg/MasterPage.Master" AutoEventWireup="true" CodeBehind="Claim.aspx.cs" Inherits="LifeInsWebApp.InsuredAgentOrg.Claim" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../Content/SimpleCropper/css/jquery.Jcrop.css" rel="stylesheet" />

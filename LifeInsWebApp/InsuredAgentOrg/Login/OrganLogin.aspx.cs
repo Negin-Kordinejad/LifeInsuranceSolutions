@@ -1,6 +1,5 @@
 ﻿using LifeInsWebApp.Model;
 using System;
-using System.Configuration;
 using System.Web;
 
 namespace LifeInsWebApp.InsuredAgentOrg.Login
@@ -25,60 +24,64 @@ namespace LifeInsWebApp.InsuredAgentOrg.Login
         }
         protected void SignInBt_Click(object sender, EventArgs e)
         {
-            string number_server_side = (string)Session[ADSSAntiBot.SESSION_CAPTCHA];
-            TextBox_number.Text = Safety.SafeSql(TextBox_number.Text);
-            number_server_side = Encryption.EncryptEngine.RawEncrypt(number_server_side, "AcS5Cf");
-            if (number_server_side != Encryption.EncryptEngine.RawEncrypt(TextBox_number.Text, "AcS5Cf"))
+
+            if (Page.IsValid)
             {
-                Label_invalid.Visible = true;
-                TextBox_number.Text = "";
-
-                return;
-            }
-            else
-            {
-                SignInUser.Text = SignInUser.Text.Replace("'", "''");
-                SignInPass.Text = SignInPass.Text.Replace("'", "''").Trim();
-
-                //---------------------------  CHECK FOR EMPTY PASSWORD
-
-
-                if (SignInPass.Text.Length == 0)
+                string number_server_side = (string)Session[ADSSAntiBot.SESSION_CAPTCHA];
+                TextBox_number.Text = Safety.SafeSql(TextBox_number.Text);
+                number_server_side = Encryption.EncryptEngine.RawEncrypt(number_server_side, "AcS5Cf");
+                if (number_server_side != Encryption.EncryptEngine.RawEncrypt(TextBox_number.Text, "AcS5Cf"))
                 {
-                    lblMessage.Text = "Please enter your password";
+                    Label_invalid.Visible = true;
                     TextBox_number.Text = "";
+
                     return;
                 }
                 else
-                    lblMessage.Text = "";
-                //------------------------------------------------------
-
-                int tmp;
-                bool useridIsNumeric = int.TryParse(SignInUser.Text, out tmp);
-                if (useridIsNumeric && (SignInUser.Text.Length == 7 || SignInUser.Text.Length == 5 || SignInUser.Text.Length == 1))
-                    SignInUser.Text = "0" + SignInUser.Text;
-
-                if (useridIsNumeric && SignInUser.Text.Length == 8) // check for devices
                 {
-                    string xpass = DataAccessFactory.CreateOrganInsuredData()
-                        .GetOrganLoginData(Convert.ToInt32(SignInUser.Text));
+                    SignInUser.Text = SignInUser.Text.Replace("'", "''");
+                    SignInPass.Text = SignInPass.Text.Replace("'", "''").Trim();
 
-                    if (SignInUser.Text + SignInPass.Text != xpass)
+                    //---------------------------  CHECK FOR EMPTY PASSWORD
+
+
+                    if (SignInPass.Text.Length == 0)
                     {
-                        lblMessage.Text = "Incorrect Username or password";
+                        lblMessage.Text = "Please enter your password";
                         TextBox_number.Text = "";
                         return;
                     }
+                    else
+                        lblMessage.Text = "";
+                    //------------------------------------------------------
 
-                    HttpContext.Current.Session.Clear();
-                    SessionHelper.Karbar = 0;
-                    SessionHelper.Dastgah.Refresh(int.Parse(SignInUser.Text));
-                    Response.Redirect("~/InsuredAgentOrg/Default.aspx", false);
-                    return;
+                    int tmp;
+                    bool useridIsNumeric = int.TryParse(SignInUser.Text, out tmp);
+                    if (useridIsNumeric && (SignInUser.Text.Length == 7 || SignInUser.Text.Length == 5 || SignInUser.Text.Length == 1))
+                        SignInUser.Text = "0" + SignInUser.Text;
+
+                    if (useridIsNumeric && SignInUser.Text.Length == 8) // check for devices
+                    {
+                        string xpass = DataAccessFactory.CreateOrganInsuredData()
+                            .GetOrganLoginData(Convert.ToInt32(SignInUser.Text));
+
+                        if (SignInUser.Text + SignInPass.Text != xpass)
+                        {
+                            lblMessage.Text = "Incorrect Username or password";
+                            TextBox_number.Text = "";
+                            return;
+                        }
+
+                        HttpContext.Current.Session.Clear();
+                        SessionHelper.Karbar = 0;
+                        SessionHelper.Dastgah.Refresh(int.Parse(SignInUser.Text));
+                        Response.Redirect("~/InsuredAgentOrg/Default.aspx", false);
+                        return;
+                    }
                 }
+                if (SignInPass.Text.Length == 0)
+                    return;
             }
-            if (SignInPass.Text.Length == 0)
-                return;
         }
     }
 }

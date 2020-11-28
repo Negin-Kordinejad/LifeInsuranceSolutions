@@ -3,19 +3,17 @@ using System.Data;
 using DataMangerClassLibrary.Models;
 using System.Data.SqlClient;
 using System.Configuration;
+using DataMangerClassLibrary.Helper;
 
 namespace DataMangerClassLibrary.DataAccess
 {
     public class ClaimData : IClaimData
     {
-        public string GetConnectionString(string name)
-        {
-            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
-        }
+      
         public DataSet GetBaseBenefit(CLaimBenefitModel model)
         {
             DataSet ds = CspfDatabaseHelper.SelectInDataSetFromStoredProcedure(
-                GetConnectionString("NewCnnStr"), 6000, "SP_GetMablagh_Original", "Table",
+              AccessHelper.ConnectionString, 6000, "SP_GetMablagh_Original", "Table",
                       CspfDatabaseHelper.GetSqlParameter_BigInt("@Nationalcode", model.NationalCode),
                        CspfDatabaseHelper.GetSqlParameter_Int("@UnitCode", model.Unitcode),
                        CspfDatabaseHelper.GetSqlParameter_Int("@Year", model.Year),
@@ -26,7 +24,7 @@ namespace DataMangerClassLibrary.DataAccess
         {
             string result = "";
             DataSet ds = CspfDatabaseHelper.SelectInDataSetFromStoredProcedure(
-               GetConnectionString("NewCnnStr"), "SP_SAVE_Gharamat",
+               AccessHelper.ConnectionString, "SP_SAVE_Gharamat",
                        CspfDatabaseHelper.GetSqlParameter_BigInt("@Nationalcode", model.NationalCode),
                        CspfDatabaseHelper.GetSqlParameter_Int("@Unit_Code", model.UnitCode),
                        CspfDatabaseHelper.GetSqlParameter_VarChar("@AccsidentDate", model.AccsidentDate),
@@ -58,7 +56,7 @@ namespace DataMangerClassLibrary.DataAccess
         public DataSet GetClaimRecords(int organinsuredcode, int year)
         {
             DataSet ds = CspfDatabaseHelper.SelectInDataSetFromStoredProcedure(
-                GetConnectionString("NewCnnStr"), 6000, "SP_GetGharamatList_ForUnit", "Table",
+                AccessHelper.ConnectionString, 6000, "SP_GetGharamatList_ForUnit", "Table",
                    CspfDatabaseHelper.GetSqlParameter_Int("@UnitCode", organinsuredcode),
                     CspfDatabaseHelper.GetSqlParameter_Int("@Year", year));
             return ds;

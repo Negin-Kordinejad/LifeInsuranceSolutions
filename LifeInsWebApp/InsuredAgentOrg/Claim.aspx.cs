@@ -3,11 +3,13 @@ using System;
 using System.Data;
 using System.Web.UI.WebControls;
 using LifeInsWebApp.Model;
+using LifeInsWebApp.Helper;
 
 namespace LifeInsWebApp.InsuredAgentOrg
 {
     public partial class Claim : System.Web.UI.Page
     {
+        private ILogger _logger = DataAccessFactory.Log();
         protected void Page_Load(object sender, EventArgs e)
         {
             txtNationalCode.Focus();
@@ -60,7 +62,7 @@ namespace LifeInsWebApp.InsuredAgentOrg
             {
                 lblkhata1.Text = "";
                 //InsuredِData data = new InsuredِData();
-                DataSet ds =DataAccessFactory.CreateInsuredData().GetInsuredData(Convert.ToInt64(txtNationalCode.Text), SessionHelper.Dastgah.DastgahCode);
+                DataSet ds = DataAccessFactory.CreateInsuredData().GetInsuredData(Convert.ToInt64(txtNationalCode.Text), SessionHelper.Dastgah.DastgahCode);
                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     if (ds.Tables[0].Columns.Count > 0 && ds.Tables[0].Columns[0].ColumnName == "KHATA")
@@ -92,7 +94,7 @@ namespace LifeInsWebApp.InsuredAgentOrg
         {
             if (txtNationalCode.Text.Trim().Length > 0 && txtHadeseDate.Text.Trim().Length > 0)
             {
-               // ClaimData data = new ClaimData();
+                // ClaimData data = new ClaimData();
                 CLaimBenefitModel model = new CLaimBenefitModel
                 {
                     NationalCode = Convert.ToInt64(txtNationalCode.Text),
@@ -100,7 +102,7 @@ namespace LifeInsWebApp.InsuredAgentOrg
                     Year = Convert.ToInt32(txtHadeseDate.Text.Substring(0, 4)),
                     Death_Date = Convert.ToString(txtHadeseDate.Text)
                 };
-                DataSet ds =DataAccessFactory.CreateClaimData().GetBaseBenefit(model);
+                DataSet ds = DataAccessFactory.CreateClaimData().GetBaseBenefit(model);
                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     int Reason = Convert.ToInt16(RdbChangeReason.SelectedItem.Value);
@@ -214,8 +216,8 @@ namespace LifeInsWebApp.InsuredAgentOrg
                         DisableTable = dt,
                         Mobiles = Convert.ToString(txtMobile.Text)
                     };
-                   // ClaimData savedata = new ClaimData();
-                    SaveResault =DataAccessFactory.CreateClaimData().SubmitClaim(model);
+                    // ClaimData savedata = new ClaimData();
+                    SaveResault = DataAccessFactory.CreateClaimData().SubmitClaim(model);
                 }
                 else
                 {
@@ -224,8 +226,11 @@ namespace LifeInsWebApp.InsuredAgentOrg
             }
             catch (Exception SaveError)
             {
-                SessionHelper.LogException(SaveError, txtNationalCode.Text, "1");
+                _logger.LogException(SaveError, txtNationalCode.Text, "1");
                 SaveResault = "There is a problem in submiting";
+                if(Trace.IsEnabled){
+                    Trace.Warn(SaveError.Message);
+                }
             }
             return SaveResault;
         }

@@ -68,6 +68,7 @@
     <Compile Include="DataAccess\InsuredِData.cs" />
     <Compile Include="DataAccess\IOrganInsuredData.cs" />
     <Compile Include="DataAccess\OrganInsuredData.cs" />
+    <Compile Include="Helper\AccessHelper.cs" />
     <Compile Include="Internal\DataAccess\SqlDataAccess.cs" />
     <Compile Include="Models\ClaimModel.cs" />
     <Compile Include="Models\CLaimBenefitModel.cs" />
@@ -76,8 +77,6 @@
     <Compile Include="Models\OrganInsuredModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Helper\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

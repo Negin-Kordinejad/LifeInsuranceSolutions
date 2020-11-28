@@ -1908,6 +1908,7 @@
     <Content Include="Content\Font\webfonts\fa-solid-900.woff" />
     <Content Include="Content\Font\webfonts\fa-solid-900.woff2" />
     <Content Include="Content\LoginStyle\bootstrap.css.map" />
+    <Content Include="InsuredAgentOrg\Login\PublicSignUp\Web.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="InsuredAgentOrg\Claim.aspx" />
     <Content Include="InsuredAgentOrg\CliamHistory.aspx" />
@@ -1916,7 +1917,7 @@
     <Content Include="Content\Image\mainbg.gif" />
     <Content Include="InsuredAgentOrg\Login\OrganLogin.aspx" />
     <Content Include="InsuredAgentOrg\Login\SignIn.aspx" />
-    <Content Include="InsuredAgentOrg\Login\SignUp.aspx" />
+    <Content Include="InsuredAgentOrg\Login\PublicSignUp\SignUp.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -1955,6 +1956,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\IMailSender.cs" />
+    <Compile Include="Helper\MailSender.cs" />
     <Compile Include="InsuredAgentOrg\Claim.aspx.cs">
       <DependentUpon>Claim.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1983,6 +1986,8 @@
     <Compile Include="InsuredAgentOrg\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Helper\ILogger.cs" />
+    <Compile Include="Helper\TextLogger.cs" />
     <Compile Include="InsuredAgentOrg\Login\GeneralMaster.Master.cs">
       <DependentUpon>GeneralMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2018,11 +2023,11 @@
     <Compile Include="InsuredAgentOrg\Login\SignIn.aspx.designer.cs">
       <DependentUpon>SignIn.aspx</DependentUpon>
     </Compile>
-    <Compile Include="InsuredAgentOrg\Login\SignUp.aspx.cs">
+    <Compile Include="InsuredAgentOrg\Login\PublicSignUp\SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="InsuredAgentOrg\Login\SignUp.aspx.designer.cs">
+    <Compile Include="InsuredAgentOrg\Login\PublicSignUp\SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
     <Compile Include="Model\CSPFCaptcha.cs" />

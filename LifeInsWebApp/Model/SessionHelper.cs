@@ -3,15 +3,13 @@ using LifeInsWebApp.Model;
 using System;
 using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
-using System.IO;
 using System.Web;
 
 namespace LifeInsWebApp
 {
     public static class SessionHelper
     {
-        private static string serverName, databaseName, userId, password;
+       
         const string dastgahKey = "DastgahGharamat";
         //   private const string codeDastgahKey = "UnitCode";
         const string karbarKey = "Karbar";
@@ -119,20 +117,8 @@ namespace LifeInsWebApp
             }
         }
 
-        public static string ConnectionString { get; set; }
-
-        public static void Initialize(string connectionString)
-        {
-            SqlConnectionStringBuilder cb = new SqlConnectionStringBuilder(connectionString);
-            bool change = serverName != cb.DataSource || databaseName != cb.InitialCatalog || userId != cb.UserID || password != cb.Password;
-
-            serverName = cb.DataSource;
-            databaseName = cb.InitialCatalog;
-            userId = cb.UserID;
-            password = cb.Password;
-            if (change)
-                ConnectionString = connectionString;
-        }
+      
+       
 
         public static void ClearSession(string propertyName)
         {
@@ -185,7 +171,7 @@ namespace LifeInsWebApp
             }
             catch (Exception exp)
             {
-                LogException(exp, "666999");
+                DataAccessFactory.Log().LogException(exp,"","","666999");
                 LogoutDataEntry();
                 qsvalid = false;
             }
@@ -198,29 +184,7 @@ namespace LifeInsWebApp
             ////////////////////////////////////////// End Test //////////////////////////////////////
         }
 
-        private static void logText(string text,Exception innerExceptiom)
-        {
-            if (File.Exists("~/Files/Exceptions.txt"))
-            {
-                File.AppendAllText(
-                    HttpContext.Current.Server.MapPath("~/Files/Exceptions.txt"),
-                    Environment.NewLine + DateTime.Now.ToString() + " ==> " + text
-                );
-            }
-            else
-            {
-                throw new FileNotFoundException("The log file is not present", innerExceptiom);
-            }
-
-        }
-
-        public static void LogException(Exception exp, string Nationalcode, string errorCode = "")
-        {
-            logText(
-                Dastgah.DastgahCode.ToString() + "NationalCode :" + Nationalcode + "-ErrorCode : " + errorCode +
-                (exp == null ? "" : Environment.NewLine + exp.Message + Environment.NewLine + exp.StackTrace)
-            ,exp);
-        }
+        
         public static int Karbar
         {
             get

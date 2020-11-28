@@ -1,22 +1,20 @@
 ﻿using Cspf.Model.Base;
+using DataMangerClassLibrary.Helper;
 using DataMangerClassLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Security.AccessControl;
 
 namespace DataMangerClassLibrary.DataAccess
 {
     public class ContractData : IContractData
     {
-        public string GetConnectionString(string name)
-        {
-            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
-        }
         public DataSet GetContractInit(int organinsuredcode)
         {
             DataSet ds = CspfDatabaseHelper.SelectInDataSetFromStoredProcedure(
-                GetConnectionString("NewCnnStr"), 6000, "Contract_Init_Get", "Table",
+               AccessHelper.ConnectionString, 6000, "Contract_Init_Get", "Table",
                    CspfDatabaseHelper.GetSqlParameter_Int("@UnitCode", organinsuredcode));
             return ds;
         }
@@ -24,7 +22,7 @@ namespace DataMangerClassLibrary.DataAccess
         {
             string result = "";
             DataSet ds = CspfDatabaseHelper.SelectInDataSetFromStoredProcedure(
-               GetConnectionString("NewCnnStr"), "Sp_Save_Contract",
+                AccessHelper.ConnectionString, "Sp_Save_Contract",
                     CspfDatabaseHelper.GetSqlParameter_Int("@status", model.Status),
                     CspfDatabaseHelper.GetSqlParameter_Int("@unitcode", model.Organinsuredcode),
                     CspfDatabaseHelper.GetSqlParameter_VarChar("@contractdate", model.ContractDate),

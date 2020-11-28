@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/InsuredAgentOrg/MasterPage.Master" AutoEventWireup="true" CodeBehind="Contract.aspx.cs" Inherits="LifeInsWebApp.InsuredAgentOrg.Contract" %>
+﻿<%@ Page Title=""  Language="C#" MasterPageFile="~/InsuredAgentOrg/MasterPage.Master" AutoEventWireup="true" CodeBehind="Contract.aspx.cs" Inherits="LifeInsWebApp.InsuredAgentOrg.Contract" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../Content/Style/xdate.css" rel="stylesheet" />

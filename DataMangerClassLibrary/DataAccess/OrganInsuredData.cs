@@ -1,4 +1,5 @@
 ﻿using Cspf.Model.Base;
+using DataMangerClassLibrary.Helper;
 using System.Configuration;
 using System.Data;
 
@@ -7,15 +8,11 @@ namespace DataMangerClassLibrary.DataAccess
 {
     public class OrganInsuredData : IOrganInsuredData
     {
-        public string GetConnectionString(string name)
-        {
-            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
-        }
-
+     
         public DataSet GetOrganInsuredData(int organinsuredcode)
         {
             DataSet ds = CspfDatabaseHelper.SelectInDataSetFromStoredProcedure(
-                GetConnectionString("NewCnnStr"), 6000, "SP_GetDastgahInfo", "Table",
+                AccessHelper.ConnectionString, 6000, "SP_GetDastgahInfo", "Table",
                  CspfDatabaseHelper.GetSqlParameter_Int("@DastgahCode", organinsuredcode));
             return ds;
 
@@ -25,7 +22,7 @@ namespace DataMangerClassLibrary.DataAccess
         {
             string result = "";
             DataSet ds = CspfDatabaseHelper.SelectInDataSetFromStoredProcedure(
-                GetConnectionString("NewCnnStr"), 6000, "SP_GetOrganLoginInfo", "Table",
+                 AccessHelper.ConnectionString, 6000, "SP_GetOrganLoginInfo", "Table",
                  CspfDatabaseHelper.GetSqlParameter_Int("@DastgahCode", organinsuredcode));
             if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
             {
@@ -38,7 +35,7 @@ namespace DataMangerClassLibrary.DataAccess
         {
             string result = "";
             DataSet ds = CspfDatabaseHelper.SelectInDataSetFromStoredProcedure(
-                GetConnectionString("NewCnnStr"), 6000, "SP_GetOrganEmailInfo", "Table",
+                 AccessHelper.ConnectionString, 6000, "SP_GetOrganEmailInfo", "Table",
                  CspfDatabaseHelper.GetSqlParameter_Int("@DastgahCode", organinsuredcode));
             if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
             {

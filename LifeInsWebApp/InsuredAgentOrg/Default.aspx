@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/InsuredAgentOrg/MasterPage.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="LifeInsWebApp.InsuredAgentOrg.Default" %>
+﻿<%@ Page Title=""  Language="C#" MasterPageFile="~/InsuredAgentOrg/MasterPage.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="LifeInsWebApp.InsuredAgentOrg.Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../Content/Style/textstyle.css" rel="stylesheet" />

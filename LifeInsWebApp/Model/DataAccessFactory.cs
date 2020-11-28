@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using DataMangerClassLibrary.DataAccess;
 using LifeInsWebApp.InsuredAgentOrg;
+using LifeInsWebApp.Helper;
 
 namespace LifeInsWebApp.Model
 {
@@ -43,6 +44,10 @@ namespace LifeInsWebApp.Model
         public static IOrganInsuredData CreateOrganInsuredData()
         {
             return new OrganInsuredData();
+        }
+        public static ILogger Log()
+        {
+            return new TextLogger();
         }
     }
 }

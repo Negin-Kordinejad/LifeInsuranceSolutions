@@ -1,9 +1,9 @@
-﻿using DataMangerClassLibrary.Models;
-using System;
+﻿using System;
 using System.Data;
 using System.Web.UI.WebControls;
 using LifeInsWebApp.Model;
 using LifeInsWebApp.Helper;
+using DataMangerClassLibrary.Models;
 
 namespace LifeInsWebApp.InsuredAgentOrg
 {

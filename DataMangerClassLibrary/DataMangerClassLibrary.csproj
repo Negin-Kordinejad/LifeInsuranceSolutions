@@ -31,17 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cspf.Model.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\App\BimeOmr.Web\BimeOmr.Web\bin\Cspf.Model.Base.dll</HintPath>
+    <Reference Include="Cspf.Model.Base">
+      <HintPath>..\packages\Cspf.Model.Base.dll</HintPath>
     </Reference>
-    <Reference Include="Cspf.Model.Web.Security, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\App\BimeOmr.Web\BimeOmr.Web\bin\Cspf.Model.Web.Security.dll</HintPath>
+    <Reference Include="Cspf.Model.Web.Security">
+      <HintPath>..\packages\Cspf.Model.Web.Security.dll</HintPath>
     </Reference>
-    <Reference Include="CspfAppTheme, Version=15.1.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\App\BimeOmr.Web\BimeOmr.Web\bin\CspfAppTheme.dll</HintPath>
+    <Reference Include="CspfAppTheme">
+      <HintPath>..\packages\CspfAppTheme.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

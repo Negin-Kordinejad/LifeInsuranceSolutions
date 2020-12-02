@@ -1,4 +1,5 @@
 ﻿//using Cspf.Model.Base;
+
 using DataMangerClassLibrary.Models;
 using LifeInsWebApp.Model;
 using System;

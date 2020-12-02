@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using DataMangerClassLibrary.DataAccess;
-using LifeInsWebApp.InsuredAgentOrg;
+﻿using DataMangerClassLibrary.DataAccess;
 using LifeInsWebApp.Helper;
 
 namespace LifeInsWebApp.Model
